@@ -1299,10 +1299,10 @@ input = input.split('\n\n').map(item => {
   const result = /Button A: X\+([\d]*), Y\+([\d]*)\nButton B: X\+([\d]*), Y\+([\d]*)\nPrize: X=([\d]*), Y=([\d]*)/gm.exec(item).map(item => +item)
   const [,Ax,Ay,Bx,By,Rx,Ry] = result
   
-  // Equation 1: a1*x + b1*y = c1
-  // Equation 2: a2*x + b2*y = c2
+  // Equation 1: Ax*x + Bx*y = Rx
+  // Equation 2: Ay*x + By*y = Ry
   
-  // Multiply equation 1 by a2 and equation 2 by a1
+  // Multiply equation 1 by Ay and equation 2 by Ax
   let eq1 = [Ax * Ay, Bx * Ay, Rx * Ay];
   let eq2 = [Ay * Ax, By * Ax, Ry * Ax];
   
