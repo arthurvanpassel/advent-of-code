@@ -3,5 +3,5 @@
   "eslint.run": "onSave",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "eslint.validate": ["typescript"],
+  "eslint.validate": ["javascript"],
 }
